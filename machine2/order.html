@@ -1,0 +1,43 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="css/orderStyles.css"/>
+	<title>Place Order Here!</title>
+</head>
+<body>
+	<form method=POST action=>
+	<h1> Reserve your machine here! </h1> <br>
+	<h2>We require some information from you first.....</h2><br>
+	<table>
+		<tr>
+			<td> Customer Name:</td>
+			<td> <input type="text" name="cusName" placeholder="your name!" /> </td> 
+		</tr>
+		<tr>
+			<td> Delivery Address:</td>
+			<td> <input type="text" name="cusAddr" placeholder="the address you want the machines to be delivered!" /> </td>
+		</tr>
+		<tr>
+			<td> Telephone Number:</td>
+			<td> <input type="text" name="cusTel" placeholder="your phone number!" /> </td> 
+		</tr>
+		<tr>
+			<td> Select your desired machine:</td>
+			<td> <select id="product">
+  				<option value="m001">Juki</option>
+  				<option value="m002">Yamaha</option>
+  				<option value="m003">Brother</option>
+				</select> 
+			</td> 
+		</tr>
+		<tr>
+			<td> Quantity :</td>
+			<td> <input type="text" name="quan" placeholder="enter a numeric value" /> </td> 
+		</tr>
+	</table>
+	<br>
+	<input type="submit" name="send" value="Place Order!"/>
+	</form>
+</body>
+</html>

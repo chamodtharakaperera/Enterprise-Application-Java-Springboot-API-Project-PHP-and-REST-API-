@@ -1,0 +1,501 @@
+/* $Id: master.css 79 2009-07-09 17:50:23Z DragKng $ */
+
+@charset "utf-8";
+@media screen
+{
+
+/*
+TABLE OF CONTENTS
+
+ZERO OUT - Sets most everything to ZERO, so there's a clean slate to start with - set any defaults here (Lists especially)
+BODY - sets the base font
+POSITIONING - generic tags for positioning
+LINKS - default and other link styling
+#HEADER - Ontario logo, #arc, #search, #navbar (main menu/navigation), #banner
+#right_column - Main content area (Many layouts - see style guide)
+#left_column - .left_nav (left hand navigation group), .menu (menu list)  
+#FOOTER - #full_footer, Copyright, Site Map, Contact Us, Privacy Notices
+*/
+
+
+/* -ZERO OUT EVERYTHING - * ---------------------------------------------------------------- */
+/* -this css sets all padding, margins, defaults to 0 - * ---------------------------------- */
+/* tables still need 'cellspacing="0"' in the markup */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 5;
+	border: 1;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+html {
+	height: 100%;
+}
+body {
+	line-height: 1; height: 100%;
+}
+blockquote, q {
+	quotes: none;
+}
+
+/* this is the behaviour for form fields when they are selected 
+:focus {
+	outline: 1px solid #000}
+*/
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none
+}
+del {
+	text-decoration: line-through
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+/* -ZERO OUT EVERYTHING - END * ---------------------------------------------------------------- */
+
+/* ----------- ZERO OUT LISTS - set your default list styles here ---------------- */
+ul { /* this is the default style - change at will - SUGGEST A STYLE */
+	margin-left: 20px; /* indented from side */
+	margin-bottom: 20px; /* space after */
+	margin-top: 10px /* space before */
+}
+
+ol { /* this is the default style - change at will - SUGGEST A STYLE */
+	margin-left: 20px; /* indented from side */
+	margin-bottom: 20px; /* space after */
+	margin-top: 10px /* space before */
+}
+
+/* BASELINE ** ADDITION ** REMOVES Margins from LISTS - nested lists have no top/bottom margins - remove to use default margins*/ 
+/*ul ul, ul ol, ul dir, ul menu, ul dl, ol ul, ol ol, ol dir, ol menu, ol dl, dir ul, dir ol, dir dir, dir menu, dir dl, menu ul, menu ol, menu dir, menu menu, menu dl, dl ul, dl ol, dl dir, dl menu, dl dl {
+	margin-top: 0;
+	margin-bottom: 0;
+}*/
+/* --------------------------------------------------------------- */ 
+
+
+
+/* sets the base font to approx 10pt */
+body { 
+	background-color: #FFFFFF; 
+	font-size: 16px;
+	font-family: Arial, sans-serif; 
+	text-align: center; 
+	line-height: 1.3em
+}
+ 
+
+/* default sizing for standard elements -------------------------- */   /* SET text attributes here */
+
+p {
+	margin: 1em 0 1.5em /* sets default margins for all paragraphs */
+}
+
+/* -------- HEADERS --------- */
+
+h1, h2, h3, h4 { font-weight: bold; line-height: 1.2em} 	/* must set explicitly, it is zeroed out above */
+
+h1 {
+	color: #47501c; 
+	font-size: 1.4em;
+	margin: 0.5em 0 1em 0  
+}
+h2 {
+	color: #47501c;
+	font-size: 1.2em;
+	padding-bottom: 6px 
+}
+h3 {
+	color: #47501c; /* COLOUR CHANGE */
+	font-size: 1.1em;
+	margin: 0.5em 0 /* default margins for h tags: in this order: top/bottom, right/left */
+}
+h4 {
+	color: #47501c; 
+	margin: 0.5em 0 0.7em 0
+}
+
+img {
+	border: 0
+}
+/* --------------------------------------------------------------- */ 
+
+
+
+/* common/generic styles ------------------------------------------------- */ 
+
+/* positioning */
+.right { /* aligns - floats right */
+	float: right;
+	margin: 0 20px;
+	text-align: right
+}
+.left { /* aligns - floats left */
+	float: left;
+	margin: 0 20px
+}
+.top { /* removes top margin */
+	margin-top: 0
+}
+.bottom { /* removes bottom margin */
+	margin-bottom: 0
+}
+
+.center { /* centers */
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto
+}
+.clear { /* to clear floats */
+	clear: both
+}
+
+/* other */
+.small { /* smaller text */
+	font-size: .85em;
+	line-height: 140%
+}
+.large { /* larger text */
+	font-size: 1.4em;
+	margin-top: 20px;
+	display: block
+}
+.indent { /* use to indent text in a pragraph */
+	margin-left: 2em
+}
+
+.padded {
+	padding: 15px;
+}
+
+.label {
+	display: block;
+	width: 5em;
+	float: left
+}
+
+hr { height: 1px; border: none; /*float: left;*/ clear: both; width: 96%; margin: 1em 0; text-align: left; color: #bfbfbf; background-color: #bfbfbf; }
+hr.thick { height: 2px; color: #bfbfbf; background-color: #bfbfbf; padding: 0; margin: 0; width:100%} /* thicker separator line - change colour if desired for greater emphasis */
+
+
+/* --------------------------------------------------------------- */ 
+
+
+
+/* tables still need 'cellspacing="0"' in the markup - CSS2 does not yet have proper table support */
+
+
+/* ---- LINKS ---------------------------------------------------- */
+
+/* default link style */
+
+a {
+	text-decoration: none;
+	color: #47501c;
+	/* background-color: transparent */
+}
+a:visited {
+	color: #666
+}
+
+#header a {
+	text-decoration: none;
+	font-weight: bold;
+	/* color: #47501c;
+	background-color: transparent */
+}
+a:hover {
+	text-decoration: underline;
+	color: #455605/* COLOUR CHANGE */
+}
+a:focus {
+  	outline: dotted thin;
+}
+
+/* default link style */
+
+/* --- SITE HOLDER(outerwrapper) ---- */
+/* conflict with existing Sharepoint id - changed 20090820 */
+
+#outerwrapper {
+	margin-left:auto;
+	margin-right:auto;
+	text-align: left;
+	margin-top: 10px;
+}
+
+#criteria
+{
+	background-color: #bbd2db;
+}
+
+/* ------------ HEADER - ONTARIO LOGO / BANNER FLASH / SEARCH / NAV -------------------- */
+#header { 
+	position: relative
+}
+
+.ministry-title
+{
+	text-align:right;
+	font-size:130%;
+	line-height:1.2em;
+	font-weight:bold;
+}
+/* HEADER LAYOUT STYLES --------------------------------------------- */
+
+#submit { /* submit button */
+	background-color: #1d2d44;
+	width: 2.0em;
+	height: 2.0em;
+	border: 0;
+	font-size: 1.5em;
+	color: #FFFFFF; /* COLOUR CHANGE */
+	vertical-align:top
+}
+
+/* -- top nav -- */
+
+#textlinks a.last, #navbar p a.last { border: none; padding-right: 0}
+
+#textlinks {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	text-align: right;
+	margin-right: 0 /* added jun2/09 */
+}
+
+#textlinks a {
+	background-color: #FFFFFF;
+	padding: 0 1em 0 11px;
+	border-right: 1px solid #999
+}
+
+a#skipNav:link, a#skipNav:visited, a#skipNav:hover { color: #FFF; border: none}
+a#skipNav:active, a#skipNav:focus { color: #17397d; border-right: 1px solid #999}
+
+
+#navbar { /* the main nav bar */
+	height: 2.75em;
+	float: left;
+	border-bottom: 20px solid #FFF;
+	background-color: #47501c  /* COLOUR CHANGE - replace Background colour with your colour that matches the graphic */
+}
+
+#navbar p
+{
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 7px 0;
+	margin: 0;
+	overflow: hidden
+}
+
+#navbar p a { /* links in navbar */
+	color: #fff2c0; /* COLOUR CHANGE - MAKE SURE CONTRAST IS VERY HIGH */
+	padding: 0 10px 0 8px; /* default */
+	border-right: 2px solid #fff2c0 /* COLOUR CHANGE (the bars in between)  - MAKE SURE CONTRAST IS VERY HIGH */
+}
+
+#navbar p a:hover {
+	text-decoration: underline
+}
+/* -- END topnav --*/
+
+#onecol {
+	font-size: 1.0em; /* STANDARDIZE */
+	line-height: 1.0em; /* STANDARDIZE */
+	overflow: hidden
+}
+
+#onecol a {
+	text-decoration: underline;
+}
+
+#onecol ul li {
+	list-style-type:disc;
+	color:#000;
+	margin-left: 15px;
+	padding-left: 5px;
+	line-height: 150%
+}
+#onecol ul li {
+	color: #000000 /* text color for lists in content area */
+}
+
+.mandatory
+{
+	color: #b20000;
+}
+
+/* FOOTER STYLES ------------ */
+
+#footer {
+	clear: both;
+	height:5em;
+	padding-top:3em;
+}
+
+#full_footer { /* changed from orginal to make the footer span the whole bottom area */
+	border-top: 1px solid #7f7f7f;
+	padding-bottom: 1em;
+}
+
+#footer p { 
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #666;
+	font-size: .9em;
+	line-height: 300%
+}
+#footer p.right { margin: 0}
+#footer p.left { margin: 0}
+#footer a { color: #666}
+
+#footer_list ul 
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+	display: inline;
+	width:100%;
+} 
+#footer_list li 
+{
+	color: #444444;
+	font-size:12pt;
+	margin-left: 0;
+	padding: 3px 15px;
+	list-style: none;
+	display: inline;
+}
+ 
+
+/* ------ HEADERS MORE ------ */
+.header h1 {
+	color: #333;
+	margin: 5px 10px 0 10px;
+	padding: 0 0 5px 0;
+	font-size: 1.2em;
+	float: none
+}
+
+.header h2 {
+	color: #333;
+	margin: 5px 10px 0 10px;
+	padding: 0 0 5px 0;
+	font-size: 1.1em;
+	float: none
+}
+
+.nomargin { margin: 0} /* removes all margins */
+.noborder { border: 0} /* removes all borders */
+.borderboth { padding-left:9px;border-right: 1px dotted #ccc;border-left: 1px dotted #ccc}
+.bottomborder { border-bottom: 1px dotted #ccc; margin-top: 15px }
+/* --------- CLEARING ------------*/
+html body div.clear, html body span.clear {
+	background:none;
+	border:0;
+	clear:both;
+	display:block;
+	float:none;
+	font-size:0;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0
+}
+
+.uppercase 
+{
+	text-transform: uppercase
+}
+.black_overlay
+{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.7;
+	opacity:.70;
+	filter: alpha(opacity=70);		
+}
+
+.white_content 
+{
+	display: none;
+	position: absolute;
+	top: 32%;
+	left: 37%;
+	width: 25%;
+	height: 33%;
+	min-height: 225px; 
+	min-width: 375px; 
+	padding: 1em;
+	border: .5em solid #bbd2db;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+#timeout-msg
+{
+	text-align: center; 
+	position: relative; top: 10%;
+	 -ms-transform: translateY(-10%); 
+	 -webkit-transform: translateY(-10%);
+	 transform: translateY(-10%);
+}
+
+#timeout-button
+{
+	text-align: center; 
+	position: relative; 
+	top: 40%; 
+	-ms-transform: translateY(-40%); 
+	-webkit-transform: translateY(-40%);
+	transform: translateY(-40%);
+}
+
+#close-button button:focus, button:hover  {
+  outline: 3px solid #d4aa00;
+ }
+ 
+ .stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+}
+@media print
+{
+.white_content {display:none;}
+}
+

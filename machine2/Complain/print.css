@@ -1,0 +1,87 @@
+@charset "utf-8";
+/**
+ * print.css
+ * @version $Id: print.css 38 2009-07-03 20:51:49Z ian $
+*/
+/* CSS Document */
+/*
+
+/* -ZERO OUT EVERYTHING - * ---------------------------------------------------------------- */
+/* -this css sets all padding, margins, defaults to 0 - * ---------------------------------- */
+/* tables still need 'cellspacing="0"' in the markup */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;	padding: 0;	border: 0;	outline: 0;	font-size: 1em;	vertical-align: baseline;	background: transparent}
+ol, ul { 
+	margin-left: 20px; 	margin-bottom: 20px }
+body { 
+	background-color: #FFF; 
+	color: #000; 
+	font: 10pt Verdana, Helvetica, Arial, sans-serif; 
+	text-align: left
+}
+/* link print style */
+a:link:after,
+a:visited:after,
+a:hover:after,
+a:active:after {
+ content: " <" attr(href) "> ";
+ color: grey;
+ font-style: italic;
+ font-weight: bold
+}
+a[href^="/"]:after {
+ content: " <http://www.ontario.ca" attr(href)"> "/* for PRINTING.. this adds a print version of the URL after the link text */
+}
+a img,a:link img, a:visited img, a:hover img, .icon a { text-decoration: none}
+p {	margin: 0.5em }
+
+/* -------- HEADERS --------- */
+h1, h2, h3, h4, h5, h6 { color: #000; font-weight: bold; margin: 0.5em} 	
+h1 { font-size: 1.4em}
+h2 { font-size: 1.2em}
+h3, h4 { font-size: 1.1em}
+
+img {	border: 0;	text-align: left }
+#right_column { /* content area */
+	width: 680px;
+	float: none;
+	line-height: 140%
+}
+.content {	padding: 0.5em}	
+.row .header { /* a full length header that spans all columns -USE: wrap .header in a .row */
+	width: 680px;
+	height: 100%;
+	position: relative;
+	border-top: 3px solid #666;
+	border-bottom: 1px solid #999;
+}
+.line_separator {
+	width: 680px;
+	height: 1px;
+	border-bottom: 1px dotted #666;
+	padding: 10px 0 }
+
+.box table td { border-top: 1px dotted #666 }
+
+#right_column img.printhide, #left_column, #mediaPlayer, #videoPlayer, #footer, #pageActions, #pageActions.ul, #header, .nav_top, .nav_bottom, .main_top, .photo_top, .photo_bottom, .icon_top, .icon_bottom, .more img, .more, #arc, #navbar, #banner, a#skipNav:link, a#skipNav:visited, a#skipNav:hover, .two_cols .split_lrg .content img { display: none }
+
+.noborder	  { border: 0 }
+.nomargin     { margin: 0 }
+
+.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_8plus,.grid_9,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16, .grid_6plus,.grid_7plus,.grid_9plus,.grid_10plus,.grid_11plus,.grid_12plus,.grid_13plus,.grid_14plus,.grid_15plus,.grid_16plus
+{display:block;float:none}
+
+.content:after {
+	clear: both
+}
+#textlinks, #arc, #navbar, #banner, #tab_menu, #tab_menu_services, #left_column, .left, .pageFind, .more, .spacerTop, .promo, .small, .thick {display: none} 
+#right_column .two_cols .column, #right_column .two_cols .column .header, #right_column .three_cols .column, #right_column .three_cols .column .header, .three_cols .column, .two_thirds .column, .two_thirds .column .header, .two_cols .split_lrg h3, .two_cols .split_lrg .content ul, .two_cols .split_lrg .content p, .two_thirds .other   { float: none;	display: block; background-image: none; background-color: #fff}

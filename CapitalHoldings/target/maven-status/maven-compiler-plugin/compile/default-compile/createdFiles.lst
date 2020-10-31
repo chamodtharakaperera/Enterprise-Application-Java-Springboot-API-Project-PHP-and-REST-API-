@@ -1,0 +1,3 @@
+com\javasampleapproach\restdata\SpringRestDataMySqlApplication.class
+com\javasampleapproach\restdata\repository\CustomerRepository.class
+com\javasampleapproach\restdata\model\Customer.class

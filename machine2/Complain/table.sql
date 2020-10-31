@@ -1,0 +1,1 @@
+CREATE TABLE complain(ComplainID int primary key NOT nUll,FirstName varchar(15),LastName varchar(15),Address varchar(50),Tel int,Email varchar(35),RepFirst varchar(15),RepLast varchar(15),warranty varchar(5),DOP date,NoMachine int,complain varchar(500))
